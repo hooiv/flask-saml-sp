@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAML SP - Secure Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Flask SAML SP</a>
+    </div>
+  </nav>
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4">Secure Sign In</h2>
+            <p class="text-center text-muted mb-4">Authenticate via your SAML Identity Provider</p>
+            <div class="d-grid">
+              <a href="{{ url_for('saml_login_request') }}" class="btn btn-primary btn-lg">Login with SAML IdP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Highlights -->
+    <div class="row text-center mt-5">
+      <div class="col-md-4 mb-4">
+        <i class="bi bi-box-arrow-right fs-1 text-primary"></i>
+        <h5 class="mt-3">SP-Initiated SSO</h5>
+        <p class="text-muted">Seamless login flows initiated by the Service Provider.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="bi bi-box-arrow-left fs-1 text-primary"></i>
+        <h5 class="mt-3">Single Logout (SLO)</h5>
+        <p class="text-muted">Graceful session termination across SP and IdP.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="bi bi-lock fs-1 text-primary"></i>
+        <h5 class="mt-3">Encrypted Assertions</h5>
+        <p class="text-muted">Data confidentiality with industry-standard encryption.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="text-center py-3 text-muted">
+    <small>&copy; 2025 My Example SP, Inc. All rights reserved.</small>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

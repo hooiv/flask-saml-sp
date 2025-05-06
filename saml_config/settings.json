@@ -1,0 +1,30 @@
+{
+  "strict": true,
+  "debug": true,
+  "sp": {
+    "entityId": "urn:flask:saml:sp:example",
+    "assertionConsumerService": {
+      "url": "http://localhost:5000/saml/acs/",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+    },
+    "singleLogoutService": {
+      "url": "http://localhost:5000/saml/slo/",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+    "x509cert": "saml_config/certs/sp.crt",
+    "privateKey": "saml_config/certs/sp.key"
+  },
+  "idp": {
+    "entityId": "IDP_ENTITY_ID_FROM_METADATA",
+    "singleSignOnService": {
+      "url": "IDP_SSO_URL_FROM_METADATA",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "singleLogoutService": {
+      "url": "IDP_SLO_URL_FROM_METADATA",
+      "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+    },
+    "x509cert": "IDP_X509CERT_FROM_METADATA"
+  }
+}

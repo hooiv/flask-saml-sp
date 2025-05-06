@@ -1,0 +1,18 @@
+{
+  "security": {
+    "authnRequestsSigned": true,
+    "logoutRequestSigned": true,
+    "logoutResponseSigned": true,
+    "wantMessagesSigned": true,
+    "wantAssertionsSigned": true,
+    "wantAssertionsEncrypted": true,
+    "signatureAlgorithm": "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256",
+    "digestAlgorithm": "http://www.w3.org/2001/04/xmlenc#sha256",
+    "checkDestination": true,
+    "checkRecipient": true,
+    "checkIssueInstant": true,
+    "checkSessionNotOnOrAfter": true,
+    "checkConditionsNotBefore": true,
+    "checkConditionsNotOnOrAfter": true
+  }
+}

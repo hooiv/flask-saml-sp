@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+.env.*
+instance/
+
+# VS Code settings
+.vscode/
+
+# SAML private key should not be committed
+saml_config/certs/sp.key
+
+# OS files
+.DS_Store
+Thumbs.db

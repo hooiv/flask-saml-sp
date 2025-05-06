@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Welcome</title></head>
+<body>
+  <h2>Welcome!</h2>
+  <p>You are logged in via SAML.</p>
+  <p><strong>NameID:</strong> {{ name_id }}</p>
+  <p><strong>Session Index:</strong> {{ session_index }}</p>
+  <h3>User Attributes:</h3>
+  {% if attributes %}
+    <ul>
+      {% for name, values in attributes.items() %}
+        <li><strong>{{ name }}:</strong> {{ values|join(', ') }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No attributes received from IdP.</p>
+  {% endif %}
+  <p><a href="{{ url_for('saml_logout_request') }}">Logout (Single Logout)</a></p>
+</body>
+</html>
